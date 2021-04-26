@@ -1,0 +1,11 @@
+Existing User Signin
+
+<%= form_for :user, url: signin_path, method: :post do |f| %>
+  <%= f.label :name %>
+  <%= f.collection_select :name, User.all, :name, :name %><br>
+
+  <%= f.label :password, "password" %>
+  <%= f.password_field :password %><br>
+
+  <%= f.submit "Sign In" %>
+<% end %>
